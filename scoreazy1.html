@@ -1,0 +1,2555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Scoreazy's AI-driven Confidence Building microcourse for Grades 3-5. Help your child overcome academic anxiety, participate actively, and develop a growth mindset with our innovative learning platform."
+    />
+    <meta
+      name="keywords"
+      content="confidence building, academic success, grades 3-5, student anxiety, growth mindset, AI learning, microcourse"
+    />
+    <meta name="author" content="Scoreazy" />
+    <meta
+      property="og:title"
+      content="Confidence Building for Grades 3-5 | Scoreazy"
+    />
+    <meta
+      property="og:description"
+      content="Transform your child's academic confidence with our AI-driven microcourse. Interactive lessons, progress tracking, and proven results."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://scoreazy.com/confidence-building-grades-3-5"
+    />
+
+    <title>
+      Confidence Building for Grades 3-5 | Scoreazy - Transform Academic Anxiety
+      into Success
+    </title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-color: #6366f1;
+        --secondary-color: #ec4899;
+        --accent-color: #f59e0b;
+        --success-color: #10b981;
+        --warning-color: #f97316;
+        --error-color: #ef4444;
+        --neutral-50: #f8fafc;
+        --neutral-100: #f1f5f9;
+        --neutral-200: #e2e8f0;
+        --neutral-300: #cbd5e1;
+        --neutral-400: #94a3b8;
+        --neutral-500: #64748b;
+        --neutral-600: #475569;
+        --neutral-700: #334155;
+        --neutral-800: #1e293b;
+        --neutral-900: #0f172a;
+      }
+
+      body {
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        color: var(--neutral-800);
+        background-color: var(--neutral-50);
+        overflow-x: hidden;
+      }
+      main,
+      header,
+      footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      /* Mascot Assistant */
+      .mascot {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(
+          135deg,
+          var(--accent-color),
+          var(--secondary-color)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1000;
+        animation: bounce 2s infinite;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+      }
+
+      .mascot:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .mascot::before {
+        content: "🌟";
+        font-size: 2rem;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      /* Header */
+      header {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--neutral-200);
+        width: 100%;
+      }
+
+      nav {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        position: relative;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--neutral-700);
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Mobile Navigation */
+      .mobile-nav-toggle {
+        display: none;
+        cursor: pointer;
+        background: none;
+        border: none;
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .mobile-nav-toggle .icon-bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--neutral-800);
+        margin: 3px 0;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .mobile-nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        z-index: 998;
+      }
+
+      .mobile-nav-links.active {
+        display: block;
+      }
+
+      .mobile-nav-links ul {
+        list-style: none;
+      }
+
+      .mobile-nav-links li {
+        margin-bottom: 1.5rem;
+      }
+
+      .mobile-nav-links a {
+        text-decoration: none;
+        color: var(--neutral-800);
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, var(--neutral-50) 0%, #e0f2fe 100%);
+        padding: 8rem 2rem 10rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin-top: 80px;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(99, 102, 241, 0.1) 0%,
+          transparent 70%
+        );
+        animation: rotate 20s linear infinite;
+        z-index: 0;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: slideInUp 1s ease-out;
+      }
+
+      .hero p {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        margin-bottom: 2.5rem;
+        color: var(--neutral-600);
+        animation: slideInUp 1s ease-out 0.2s both;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+        animation: slideInUp 1s ease-out 0.4s both;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+      }
+
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Trust Signals */
+      .trust-signals {
+        background: white;
+        padding: 2rem;
+        margin: -50px auto 0;
+        width: 90%;
+        max-width: 900px;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 2rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .trust-item {
+        text-align: center;
+        min-width: 120px;
+      }
+
+      .trust-number {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        font-weight: 800;
+        color: var(--primary-color);
+        display: block;
+        animation: countUp 2s ease-out;
+      }
+
+      .trust-label {
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
+        color: var(--neutral-600);
+        margin-top: 0.5rem;
+      }
+
+      /* Live Counter Animation */
+      .live-counter {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .live-counter::after {
+        content: "🔥";
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        animation: pulse 1.5s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: translateY(-50%) scale(1);
+        }
+        50% {
+          opacity: 0.7;
+          transform: translateY(-50%) scale(1.2);
+        }
+      }
+
+      /* Section Styles */
+      section {
+        padding: clamp(3rem, 8vw, 6rem) 2rem;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 3rem;
+        color: var(--neutral-800);
+      }
+
+      .section-subtitle {
+        font-size: clamp(1rem, 2.5vw, 1.1rem);
+        text-align: center;
+        color: var(--neutral-600);
+        margin-bottom: 4rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Confidence Progress Simulator */
+      .progress-simulator {
+        background: linear-gradient(135deg, #f0f9ff, #fef3c7);
+        padding: clamp(2rem, 6vw, 3rem);
+        border-radius: 25px;
+        margin: 4rem 0;
+        text-align: center;
+      }
+
+      .progress-slider {
+        width: 100%;
+        max-width: 500px;
+        margin: 2rem auto;
+        position: relative;
+      }
+
+      .slider {
+        width: 100%;
+        height: 10px;
+        border-radius: 5px;
+        background: var(--neutral-200);
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+      }
+
+      .progress-display {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .progress-metric {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .progress-metric:hover {
+        transform: translateY(-5px);
+      }
+
+      .metric-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .metric-value {
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+
+      .metric-label {
+        color: var(--neutral-600);
+        margin-top: 0.5rem;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      /* Demo Zone */
+      .demo-zone {
+        background: var(--neutral-50);
+        padding: clamp(2rem, 6vw, 4rem);
+        border-radius: 25px;
+        margin: 4rem 0;
+      }
+
+      .demo-video {
+        position: relative;
+        background: var(--neutral-800);
+        border-radius: 15px;
+        overflow: hidden;
+        aspect-ratio: 16/9;
+        margin-bottom: 2rem;
+      }
+
+      .demo-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: white;
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .demo-feedback {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      .feedback-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Quiz Section */
+      .quiz-section {
+        background: linear-gradient(135deg, #fef7f7, #f0f9ff);
+        padding: clamp(2rem, 6vw, 4rem);
+        border-radius: 25px;
+        margin: 4rem 0;
+      }
+
+      .quiz-question {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        margin-bottom: 2rem;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .quiz-options {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .quiz-option {
+        background: var(--neutral-100);
+        padding: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        text-align: left;
+      }
+
+      .quiz-option:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: translateX(5px);
+      }
+
+      /* Emoji Feedback Slider */
+      .emoji-feedback {
+        background: linear-gradient(135deg, #fef3c7, #fef7f7);
+        padding: clamp(2rem, 6vw, 3rem);
+        border-radius: 25px;
+        margin: 4rem 0;
+        text-align: center;
+      }
+
+      .emoji-slider {
+        width: 100%;
+        max-width: 400px;
+        margin: 2rem auto;
+        position: relative;
+      }
+
+      .emoji-display {
+        font-size: 4rem;
+        margin: 2rem 0;
+        animation: bounce 0.5s ease;
+      }
+
+      /* Benefits Grid */
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .benefit-card {
+        background: white;
+        padding: clamp(2rem, 4vw, 3rem) 2rem;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .benefit-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+      }
+
+      .benefit-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .benefit-icon {
+        font-size: clamp(2.5rem, 5vw, 3rem);
+        margin-bottom: 1.5rem;
+        display: block;
+      }
+
+      .benefit-title {
+        font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--neutral-800);
+      }
+
+      .benefit-description {
+        color: var(--neutral-600);
+        line-height: 1.6;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      /* Testimonials */
+      .testimonials {
+        background: var(--neutral-50);
+        padding: clamp(3rem, 8vw, 6rem) 2rem;
+      }
+
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .testimonial-card {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .testimonial-card::before {
+        content: '"';
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        font-size: 4rem;
+        color: var(--primary-color);
+        opacity: 0.3;
+      }
+
+      .testimonial-content {
+        font-style: italic;
+        margin-bottom: 2rem;
+        color: var(--neutral-700);
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .author-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .author-info h4 {
+        font-weight: 600;
+        color: var(--neutral-800);
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      .author-info p {
+        font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+        color: var(--neutral-600);
+      }
+
+      /* Audio Player */
+      .audio-testimonial {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: var(--neutral-100);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .play-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        border: none;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+      }
+
+      .play-button:hover {
+        transform: scale(1.1);
+      }
+
+      /* How It Works */
+      .how-it-works {
+        padding: clamp(3rem, 8vw, 6rem) 2rem;
+      }
+
+      .steps-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-top: 4rem;
+      }
+
+      .step {
+        text-align: center;
+        position: relative;
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 2rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .step-title {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--neutral-800);
+      }
+
+      .step-description {
+        color: var(--neutral-600);
+        line-height: 1.6;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      /* Time Calculator */
+      .time-calculator {
+        background: linear-gradient(135deg, #f0fdf4, #fef3c7);
+        padding: clamp(2rem, 6vw, 4rem);
+        border-radius: 25px;
+        margin: 4rem 0;
+        text-align: center;
+      }
+
+      .calculator-form {
+        max-width: 500px;
+        margin: 2rem auto;
+        display: grid;
+        gap: 2rem;
+      }
+
+      .form-group {
+        text-align: left;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--neutral-700);
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      .form-group select,
+      .form-group input {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid var(--neutral-200);
+        border-radius: 10px;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+        transition: border-color 0.3s ease;
+        min-height: 44px;
+      }
+
+      .form-group select:focus,
+      .form-group input:focus {
+        outline: none;
+        border-color: var(--primary-color);
+      }
+
+      .calculate-button {
+        background: var(--success-color);
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        min-height: 44px;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      .calculate-button:hover {
+        background: #059669;
+        transform: translateY(-2px);
+      }
+
+      .result-display {
+        margin-top: 2rem;
+        padding: 2rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Instructor Profile */
+      .instructor-section {
+        background: var(--neutral-50);
+        padding: clamp(3rem, 8vw, 6rem) 2rem;
+      }
+
+      .instructor-card {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: clamp(2rem, 6vw, 4rem);
+        border-radius: 25px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        display: grid;
+        grid-template-columns: minmax(150px, 200px) 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .instructor-photo {
+        width: 100%;
+        aspect-ratio: 1;
+        max-width: 200px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4rem;
+        color: white;
+        margin: 0 auto;
+      }
+
+      .instructor-info h3 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--neutral-800);
+      }
+
+      .instructor-title {
+        color: var(--primary-color);
+        font-weight: 600;
+        margin-bottom: 2rem;
+        font-size: clamp(1rem, 2.5vw, 1.1rem);
+      }
+
+      .instructor-bio {
+        color: var(--neutral-600);
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      .credentials {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .credential {
+        background: var(--neutral-100);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+        color: var(--neutral-700);
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        padding: clamp(3rem, 8vw, 6rem) 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        background: white;
+        margin-bottom: 1rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .faq-question {
+        padding: 2rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        color: var(--neutral-800);
+        transition: background-color 0.3s ease;
+        min-height: 44px;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      .faq-question:hover {
+        background: var(--neutral-50);
+      }
+
+      .faq-answer {
+        padding: 0 2rem 2rem;
+        color: var(--neutral-600);
+        line-height: 1.8;
+        display: none;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      .faq-item.active .faq-answer {
+        display: block;
+        animation: slideDown 0.3s ease;
+      }
+
+      .faq-icon {
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+        margin-left: 1rem;
+      }
+
+      .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Mobile Story Mode */
+      .mobile-story {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--neutral-900);
+        z-index: 10000;
+        overflow-y: auto;
+      }
+
+      .story-slide {
+        min-height: 100vh;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+      }
+
+      .story-content h2 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin-bottom: 1rem;
+      }
+
+      .story-content p {
+        font-size: clamp(1rem, 2.5vw, 1.1rem);
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .story-progress {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 2px;
+      }
+
+      .story-progress-bar {
+        height: 100%;
+        background: white;
+        border-radius: 2px;
+        transition: width 0.3s ease;
+      }
+
+      .close-story {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        min-height: 44px;
+        min-width: 44px;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--neutral-900);
+        color: white;
+        padding: 4rem 2rem 2rem;
+        text-align: center;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .footer-section h3 {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: var(--accent-color);
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 0.8rem;
+      }
+
+      .footer-section ul li a {
+        color: var(--neutral-300);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      .footer-section ul li a:hover {
+        color: white;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid var(--neutral-700);
+        padding-top: 2rem;
+        color: var(--neutral-400);
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
+      }
+
+      /* Enhanced Mobile Responsive Design */
+      @media (max-width: 1024px) {
+        .instructor-card {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 2rem;
+        }
+
+        .progress-display {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        body {
+          font-size: 16px;
+        }
+
+        .hero {
+          padding: 6rem 1rem 8rem;
+          margin-top: 70px;
+        }
+
+        .trust-signals {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.5rem;
+          padding: 1.5rem;
+          margin: -30px 1rem 0;
+          width: calc(100% - 2rem);
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .mobile-nav-toggle {
+          display: flex;
+        }
+
+        section {
+          padding: clamp(2rem, 6vw, 4rem) 1rem;
+        }
+
+        .benefits-grid,
+        .testimonial-grid,
+        .steps-container {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .demo-feedback {
+          grid-template-columns: 1fr;
+        }
+
+        .instructor-card {
+          padding: 2rem 1rem;
+        }
+
+        .instructor-photo {
+          width: 120px;
+          height: 120px;
+          font-size: 3rem;
+        }
+
+        .credentials {
+          justify-content: center;
+        }
+
+        .faq-question {
+          padding: 1.5rem;
+        }
+
+        .faq-answer {
+          padding: 0 1.5rem 1.5rem;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          text-align: left;
+        }
+
+        .mascot {
+          width: 60px;
+          height: 60px;
+          bottom: 15px;
+          right: 15px;
+        }
+
+        .mascot::before {
+          font-size: 1.5rem;
+        }
+
+        /* Better mobile story handling */
+        .mobile-story {
+          display: block;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero {
+          padding: 5rem 1rem 6rem;
+        }
+
+        .trust-signals {
+          grid-template-columns: 1fr 1fr;
+          margin: -20px 0.5rem 0;
+          width: calc(100% - 1rem);
+          padding: 1rem;
+        }
+
+        .quiz-option {
+          padding: 0.8rem;
+        }
+
+        .testimonial-card,
+        .benefit-card {
+          margin: 0 0.5rem;
+        }
+
+        nav {
+          padding: 0 1rem;
+        }
+
+        .logo {
+          font-size: 1.3rem;
+        }
+      }
+
+      /* Accessibility */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      /* High contrast mode */
+      @media (prefers-contrast: high) {
+        :root {
+          --primary-color: #0000ff;
+          --secondary-color: #ff0000;
+          --neutral-600: #000000;
+          --neutral-700: #000000;
+          --neutral-800: #000000;
+        }
+      }
+
+      /* Focus indicators */
+      button:focus,
+      input:focus,
+      select:focus,
+      .cta-button:focus,
+      .quiz-option:focus,
+      .faq-question:focus {
+        outline: 3px solid var(--accent-color);
+        outline-offset: 2px;
+      }
+
+      /* Touch targets for better mobile usability */
+      @media (max-width: 768px) {
+        button,
+        .cta-button,
+        .quiz-option,
+        .faq-question,
+        input,
+        select {
+          min-height: 44px;
+          min-width: 44px;
+        }
+      }
+      .demo-video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mascot Assistant -->
+    <div
+      class="mascot"
+      role="button"
+      tabindex="0"
+      aria-label="AI Learning Assistant"
+      title="Hi! I'm your confidence buddy! Click me for help!"
+    ></div>
+
+    <!-- Header -->
+    <header>
+      <nav>
+        <a href="#" class="logo">Scoreazy</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li>
+            <a
+              href="#enroll"
+              class="cta-button"
+              style="padding: 0.5rem 1.5rem; font-size: 0.9rem"
+              >Enroll Now</a
+            >
+          </li>
+        </ul>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="mobile-nav-links">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#enroll">Enroll Now</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Transform Your Child's Academic Confidence</h1>
+        <p>
+          Help your Grades 3-5 student overcome anxiety, participate actively,
+          and develop an unstoppable growth mindset with our AI-powered
+          microcourse.
+        </p>
+        <a href="#enroll" class="cta-button">Start Building Confidence Today</a>
+      </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <div class="trust-signals">
+      <div class="trust-item">
+        <span class="trust-number" data-target="1247">0</span>
+        <div class="trust-label">Students Helped</div>
+      </div>
+      <div class="trust-item live-counter">
+        <span class="trust-number" data-target="23">0</span>
+        <div class="trust-label">Joined in 24h</div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-number" data-target="96">0</span>
+        <div class="trust-label">Success Rate (%)</div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-number" data-target="4.9">0</span>
+        <div class="trust-label">Parent Rating</div>
+      </div>
+    </div>
+
+    <!-- Confidence Progress Simulator -->
+    <section class="progress-simulator">
+      <h2 class="section-title">See Your Child's Journey</h2>
+      <p class="section-subtitle">
+        Move the slider to see how your child's confidence grows week by week
+      </p>
+
+      <div class="progress-slider">
+        <input
+          type="range"
+          min="0"
+          max="8"
+          value="0"
+          class="slider"
+          id="progressSlider"
+        />
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--neutral-600);
+          "
+        >
+          <span>Week 1</span>
+          <span>Week 4</span>
+          <span>Week 8</span>
+        </div>
+      </div>
+
+      <div class="progress-display">
+        <div class="progress-metric">
+          <div class="metric-icon" id="moodIcon">😟</div>
+          <div class="metric-value" id="moodValue">Low</div>
+          <div class="metric-label">Mood in Class</div>
+        </div>
+        <div class="progress-metric">
+          <div class="metric-icon" id="participationIcon">🤐</div>
+          <div class="metric-value" id="participationValue">Rarely</div>
+          <div class="metric-label">Participation</div>
+        </div>
+        <div class="progress-metric">
+          <div class="metric-icon" id="gradesIcon">📊</div>
+          <div class="metric-value" id="gradesValue">C+</div>
+          <div class="metric-label">Average Grade</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Demo Zone -->
+    <section class="demo-zone">
+      <h2 class="section-title">Try a Sample Lesson</h2>
+      <p class="section-subtitle">
+        Experience our interactive teaching style with this 1-minute confidence
+        booster
+      </p>
+
+      <div class="demo-video">
+        <iframe
+          src="https://youtu.be/DrVdXst7q9w"
+          title="Scoreazy Sample Lesson: I Can Handle Mistakes"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="demo-feedback">
+        <div class="feedback-card">
+          <h4 style="color: var(--primary-color); margin-bottom: 1rem">
+            Emma, Age 8
+          </h4>
+          <p>
+            "This video made me feel like making mistakes is okay! I want to try
+            more hard problems now."
+          </p>
+          <div style="margin-top: 1rem; color: var(--accent-color)">
+            ⭐⭐⭐⭐⭐
+          </div>
+        </div>
+        <div class="feedback-card">
+          <h4 style="color: var(--primary-color); margin-bottom: 1rem">
+            Marcus, Age 9
+          </h4>
+          <p>
+            "The cartoon character is funny and teaches me that my brain grows
+            when I practice!"
+          </p>
+          <div style="margin-top: 1rem; color: var(--accent-color)">
+            ⭐⭐⭐⭐⭐
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parent-Child Preview Quiz -->
+    <section class="quiz-section">
+      <h2 class="section-title">Find Your Child's Perfect Starting Point</h2>
+      <p class="section-subtitle">
+        Take this quick quiz together to get a personalized recommendation
+      </p>
+
+      <div class="quiz-question">
+        <h3 style="margin-bottom: 1rem">
+          How does your child typically react to challenging schoolwork?
+        </h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-result="gentle-start">
+            😰 Gets anxious and wants to give up quickly
+          </div>
+          <div class="quiz-option" data-result="confidence-boost">
+            😐 Tries but gets frustrated easily
+          </div>
+          <div class="quiz-option" data-result="advanced-track">
+            😊 Likes challenges but needs encouragement
+          </div>
+          <div class="quiz-option" data-result="leadership-track">
+            🚀 Loves challenges and helps others too
+          </div>
+        </div>
+        <div
+          id="quizResult"
+          style="
+            margin-top: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            display: none;
+          "
+        >
+          <h4 style="color: var(--success-color); margin-bottom: 1rem">
+            Perfect Match Found! 🎯
+          </h4>
+          <p id="resultText"></p>
+          <a
+            href="#enroll"
+            class="cta-button"
+            style="margin-top: 1rem; display: inline-block"
+            >Start Recommended Track</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Emoji Feedback Slider -->
+    <section class="emoji-feedback">
+      <h2 class="section-title">How Excited Is Your Child?</h2>
+      <p class="section-subtitle">
+        Move the slider to show how your child feels about building confidence
+      </p>
+
+      <div class="emoji-slider">
+        <input
+          type="range"
+          min="1"
+          max="5"
+          value="3"
+          class="slider"
+          id="emojiSlider"
+        />
+      </div>
+
+      <div class="emoji-display" id="emojiDisplay">😐</div>
+      <p id="emojiText" style="font-size: 1.1rem; color: var(--neutral-600)">
+        Neutral
+      </p>
+    </section>
+
+    <!-- Time-to-Confidence Calculator -->
+    <section class="time-calculator">
+      <h2 class="section-title">When Will You See Results?</h2>
+      <p class="section-subtitle">
+        Get a personalized timeline based on your child's current confidence
+        level
+      </p>
+
+      <form class="calculator-form">
+        <div class="form-group">
+          <label for="currentLevel">Current confidence level in school:</label>
+          <select id="currentLevel">
+            <option value="">Select level...</option>
+            <option value="low">Low - Often anxious about schoolwork</option>
+            <option value="medium">
+              Medium - Sometimes confident, sometimes not
+            </option>
+            <option value="high">
+              High - Generally confident but wants to improve
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="practiceTime"
+            >How much time can your child practice daily?</label
+          >
+          <select id="practiceTime">
+            <option value="">Select time...</option>
+            <option value="10">10-15 minutes</option>
+            <option value="20">20-25 minutes</option>
+            <option value="30">30+ minutes</option>
+          </select>
+        </div>
+        <button
+          type="button"
+          class="calculate-button"
+          onclick="calculateConfidence()"
+        >
+          Calculate My Timeline
+        </button>
+      </form>
+
+      <div class="result-display" id="calculatorResult" style="display: none">
+        <h3 style="color: var(--success-color); margin-bottom: 1rem">
+          Your Personalized Timeline 🎯
+        </h3>
+        <div id="timelineText"></div>
+      </div>
+    </section>
+
+    <!-- About the Course -->
+    <section id="about">
+      <h2 class="section-title">About the Confidence Building Course</h2>
+      <p class="section-subtitle">
+        A scientifically-designed 8-week journey that transforms academic
+        anxiety into unstoppable confidence
+      </p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <span class="benefit-icon">🧠</span>
+          <h3 class="benefit-title">Growth Mindset Development</h3>
+          <p class="benefit-description">
+            Learn that intelligence grows with practice and effort, turning
+            challenges into opportunities for growth.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">💪</span>
+          <h3 class="benefit-title">Anxiety Management</h3>
+          <p class="benefit-description">
+            Master simple, effective techniques to calm nerves before tests and
+            presentations.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🗣️</span>
+          <h3 class="benefit-title">Active Participation</h3>
+          <p class="benefit-description">
+            Build courage to raise hands, ask questions, and share ideas
+            confidently in class.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🌟</span>
+          <h3 class="benefit-title">Self-Advocacy Skills</h3>
+          <p class="benefit-description">
+            Learn to ask for help when needed and communicate learning needs
+            effectively.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🎯</span>
+          <h3 class="benefit-title">Goal Setting</h3>
+          <p class="benefit-description">
+            Create achievable academic goals and celebrate progress along the
+            way.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🤝</span>
+          <h3 class="benefit-title">Social Confidence</h3>
+          <p class="benefit-description">
+            Build friendships and collaborate effectively with classmates on
+            group projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" style="background: var(--neutral-50)">
+      <h2 class="section-title">Why Parents Choose Scoreazy</h2>
+      <p class="section-subtitle">
+        Evidence-based results that transform your child's academic experience
+      </p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <span class="benefit-icon">⚡</span>
+          <h3 class="benefit-title">Just 15 Minutes Daily</h3>
+          <p class="benefit-description">
+            Bite-sized lessons that fit perfectly into busy family schedules
+            without overwhelming your child.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🤖</span>
+          <h3 class="benefit-title">AI-Powered Personalization</h3>
+          <p class="benefit-description">
+            Adaptive content that adjusts to your child's learning pace and
+            confidence level automatically.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">📱</span>
+          <h3 class="benefit-title">Parent Dashboard</h3>
+          <p class="benefit-description">
+            Track progress, receive insights, and get conversation starters to
+            support your child at home.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🏆</span>
+          <h3 class="benefit-title">Gamified Learning</h3>
+          <p class="benefit-description">
+            Earn badges, unlock achievements, and celebrate milestones that keep
+            motivation high.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">👥</span>
+          <h3 class="benefit-title">Expert Support</h3>
+          <p class="benefit-description">
+            Access to child psychologists and education specialists when you
+            need guidance.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">💯</span>
+          <h3 class="benefit-title">Money-Back Guarantee</h3>
+          <p class="benefit-description">
+            If you don't see improvement in 30 days, get a full refund - no
+            questions asked.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+      <div style="max-width: 1200px; margin: 0 auto">
+        <h2 class="section-title">Real Results from Real Families</h2>
+        <p class="section-subtitle">
+          Hear from parents and students who've transformed their academic
+          confidence
+        </p>
+
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              "Emma went from crying before math tests to raising her hand first
+              in class. The change happened in just 3 weeks! She now says 'I'm
+              still learning' instead of 'I'm not smart.'"
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">SJ</div>
+              <div class="author-info">
+                <h4>Sarah Johnson</h4>
+                <p>Parent of Emma, Grade 4</p>
+              </div>
+            </div>
+            <div class="audio-testimonial">
+              <button class="play-button" aria-label="Play audio testimonial">
+                ▶️
+              </button>
+              <span>Listen to Sarah's full story (2:30)</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              "My son Marcus was so shy he'd never speak up in class. Now he
+              volunteers to present projects and even helps other kids who are
+              struggling. His teacher can't believe the transformation!"
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">DT</div>
+              <div class="author-info">
+                <h4>David Thompson</h4>
+                <p>Parent of Marcus, Grade 3</p>
+              </div>
+            </div>
+            <div class="audio-testimonial">
+              <button class="play-button" aria-label="Play audio testimonial">
+                ▶️
+              </button>
+              <span>Hear Marcus speak about his journey (1:45)</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              "I love the confidence lessons! The cartoon teacher is funny and
+              now I know that making mistakes helps my brain grow bigger. I'm
+              not scared of hard problems anymore!"
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">A</div>
+              <div class="author-info">
+                <h4>Aisha</h4>
+                <p>Student, Grade 5</p>
+              </div>
+            </div>
+            <div class="audio-testimonial">
+              <button class="play-button" aria-label="Play audio testimonial">
+                ▶️
+              </button>
+              <span>Listen to Aisha's excitement (1:20)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">
+        A simple 3-step process that fits seamlessly into your family routine
+      </p>
+
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Complete Assessment</h3>
+          <p class="step-description">
+            Your child takes a fun, game-like assessment that identifies their
+            unique confidence patterns and learning style preferences.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Start Daily Lessons</h3>
+          <p class="step-description">
+            Engage with personalized 15-minute interactive lessons featuring
+            stories, activities, and confidence-building exercises.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Track & Celebrate</h3>
+          <p class="step-description">
+            Watch confidence grow through our parent dashboard and celebrate
+            milestones with digital badges and real-world rewards.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instructor Profile -->
+    <section class="instructor-section">
+      <div style="max-width: 1200px; margin: 0 auto">
+        <h2 class="section-title">Meet Your Confidence Coach</h2>
+        <div class="instructor-card">
+          <div class="instructor-photo">👩‍🏫</div>
+          <div class="instructor-info">
+            <h3>Dr. Maria Rodriguez</h3>
+            <p class="instructor-title">
+              Child Psychologist & Confidence Expert
+            </p>
+            <p class="instructor-bio">
+              With 15 years of experience helping children overcome academic
+              anxiety, Dr. Rodriguez has transformed the lives of over 10,000
+              students. Her research-backed approach combines cognitive
+              behavioral techniques with positive psychology to build lasting
+              confidence in young learners.
+            </p>
+            <div class="credentials">
+              <span class="credential">PhD Child Psychology</span>
+              <span class="credential">Licensed Therapist</span>
+              <span class="credential">Author of 3 Books</span>
+              <span class="credential">TEDx Speaker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Digital Badge Generator Preview -->
+    <section
+      style="
+        background: linear-gradient(135deg, #fef3c7, #ddd6fe);
+        padding: clamp(2rem, 6vw, 4rem);
+        text-align: center;
+      "
+    >
+      <h2 class="section-title">Your Child's Achievement Badge</h2>
+      <p class="section-subtitle">
+        Every enrolled student receives a personalized digital badge they can
+        proudly share
+      </p>
+
+      <div
+        style="
+          max-width: 400px;
+          margin: 2rem auto;
+          padding: 3rem;
+          background: white;
+          border-radius: 25px;
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <div
+          style="
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(
+              135deg,
+              var(--primary-color),
+              var(--secondary-color)
+            );
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+          "
+        >
+          🏆
+        </div>
+        <h3 style="color: var(--primary-color); margin-bottom: 1rem">
+          Confidence Explorer
+        </h3>
+        <p style="color: var(--neutral-600); margin-bottom: 2rem">
+          Awarded to [Your Child's Name] for completing the Confidence Building
+          Journey
+        </p>
+        <div
+          style="
+            background: var(--neutral-100);
+            padding: 1rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: var(--neutral-600);
+          "
+        >
+          Personalized with your child's name, photo, and achievement date
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How long does it take to see results?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Most parents notice positive changes in their child's attitude and
+          classroom participation within 2-3 weeks. Significant confidence
+          improvements typically occur by week 4, with lasting behavioral
+          changes solidified by the end of the 8-week program.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Is this suitable for children with learning differences?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Absolutely! Our AI-powered platform adapts to different learning
+          styles, processing speeds, and attention spans. We've successfully
+          worked with children who have ADHD, dyslexia, autism spectrum
+          differences, and other learning variations. The program includes
+          visual, auditory, and kinesthetic learning elements.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What if my child doesn't want to participate?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Our gamified approach and engaging characters make learning feel like
+          play, not work. We provide parent guides with strategies to introduce
+          the program positively. If your child still resists after 30 days, our
+          money-back guarantee ensures you're not stuck with something that
+          isn't working.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How much time does this require from parents?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Minimal! Your child can complete most activities independently. We
+          recommend 5-10 minutes weekly reviewing progress in your parent
+          dashboard and having brief conversations using our provided discussion
+          starters. Optional weekly check-ins with our support team are
+          available but not required.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What technology do we need?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Just a tablet, computer, or smartphone with internet access. Our
+          platform works on all devices and automatically saves progress. No
+          downloads or installations required - everything runs in your web
+          browser for maximum convenience and security.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Is there ongoing support after the 8 weeks?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes! Graduates get lifetime access to our resource library, monthly
+          confidence maintenance activities, and our parent community forum. You
+          can also purchase advanced modules or request one-on-one coaching
+          sessions with our specialists as your child grows.
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section
+      id="enroll"
+      style="
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        padding: clamp(3rem, 8vw, 6rem) 2rem;
+        text-align: center;
+        color: white;
+      "
+    >
+      <div style="max-width: 800px; margin: 0 auto">
+        <h2
+          style="
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+          "
+        >
+          Ready to Transform Your Child's Academic Journey?
+        </h2>
+        <p
+          style="
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            margin-bottom: 3rem;
+            opacity: 0.9;
+          "
+        >
+          Join 1,247+ families who've already discovered the confidence-building
+          secret that changes everything.
+        </p>
+
+        <div
+          style="
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: clamp(2rem, 4vw, 3rem);
+            border-radius: 25px;
+            margin-bottom: 3rem;
+          "
+        >
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+              gap: 2rem;
+              margin-bottom: 2rem;
+            "
+          >
+            <div>
+              <div
+                style="font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700"
+              >
+                $47
+              </div>
+              <div style="opacity: 0.8; font-size: clamp(0.9rem, 2vw, 1rem)">
+                One-time payment
+              </div>
+            </div>
+            <div>
+              <div
+                style="font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700"
+              >
+                8 Weeks
+              </div>
+              <div style="opacity: 0.8; font-size: clamp(0.9rem, 2vw, 1rem)">
+                Complete program
+              </div>
+            </div>
+            <div>
+              <div
+                style="font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700"
+              >
+                30 Days
+              </div>
+              <div style="opacity: 0.8; font-size: clamp(0.9rem, 2vw, 1rem)">
+                Money-back guarantee
+              </div>
+            </div>
+          </div>
+          <p style="font-size: clamp(0.8rem, 1.8vw, 0.9rem); opacity: 0.8">
+            ✨ Includes: AI-personalized lessons, parent dashboard, digital
+            badges, expert support, and lifetime resource access
+          </p>
+        </div>
+
+        <a
+          href="#"
+          class="cta-button"
+          style="
+            background: white;
+            color: var(--primary-color);
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            padding: 1.5rem 3rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+          "
+          >Start Your Child's Confidence Journey</a
+        >
+
+        <p
+          style="
+            font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+            margin-top: 2rem;
+            opacity: 0.8;
+          "
+        >
+          🔒 Secure checkout • 30-day money-back guarantee • Cancel anytime
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Scoreazy</h3>
+          <p style="color: var(--neutral-300); line-height: 1.6">
+            Empowering students worldwide with AI-driven confidence building and
+            academic success programs.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Programs</h3>
+          <ul>
+            <li><a href="#">Confidence Building (K-5)</a></li>
+            <li><a href="#">Study Skills Mastery</a></li>
+            <li><a href="#">Test Anxiety Relief</a></li>
+            <li><a href="#">Social Skills Development</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Parent Resources</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Technical Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Scoreazy. All rights reserved. Made with ❤️ for confident
+          learners everywhere.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Navigation Toggle
+      document
+        .querySelector(".mobile-nav-toggle")
+        .addEventListener("click", function () {
+          const mobileNavLinks = document.querySelector(".mobile-nav-links");
+          mobileNavLinks.classList.toggle("active");
+        });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll(".mobile-nav-links a").forEach((link) => {
+        link.addEventListener("click", function () {
+          document
+            .querySelector(".mobile-nav-links")
+            .classList.remove("active");
+        });
+      });
+
+      // Progress Simulator
+      const progressSlider = document.getElementById("progressSlider");
+      const moodIcon = document.getElementById("moodIcon");
+      const moodValue = document.getElementById("moodValue");
+      const participationIcon = document.getElementById("participationIcon");
+      const participationValue = document.getElementById("participationValue");
+      const gradesIcon = document.getElementById("gradesIcon");
+      const gradesValue = document.getElementById("gradesValue");
+
+      const progressData = {
+        mood: ["😟", "😕", "😐", "🙂", "😊", "😄", "🤩", "🌟", "✨"],
+        moodText: [
+          "Low",
+          "Worried",
+          "Neutral",
+          "Okay",
+          "Good",
+          "Happy",
+          "Excited",
+          "Amazing",
+          "Confident!",
+        ],
+        participation: ["🤐", "🤐", "✋", "🗣️", "💬", "🙋", "🎯", "🌟", "👑"],
+        participationText: [
+          "Rarely",
+          "Sometimes",
+          "Occasional",
+          "Regular",
+          "Active",
+          "Eager",
+          "Leader",
+          "Confident",
+          "Inspiring!",
+        ],
+        grades: ["📊", "📈", "📈", "⭐", "⭐", "🌟", "🎯", "🏆", "👑"],
+        gradesText: [
+          "C+",
+          "B-",
+          "B",
+          "B+",
+          "A-",
+          "A",
+          "A+",
+          "Excellent",
+          "Outstanding!",
+        ],
+      };
+
+      progressSlider.addEventListener("input", function () {
+        const value = parseInt(this.value);
+        moodIcon.textContent = progressData.mood[value];
+        moodValue.textContent = progressData.moodText[value];
+        participationIcon.textContent = progressData.participation[value];
+        participationValue.textContent = progressData.participationText[value];
+        gradesIcon.textContent = progressData.grades[value];
+        gradesValue.textContent = progressData.gradesText[value];
+      });
+
+      // Quiz functionality
+      document.querySelectorAll(".quiz-option").forEach((option) => {
+        option.addEventListener("click", function () {
+          const result = this.getAttribute("data-result");
+          const resultDiv = document.getElementById("quizResult");
+          const resultText = document.getElementById("resultText");
+
+          const recommendations = {
+            "gentle-start":
+              'Your child would benefit from our "Gentle Confidence" track, starting with emotional regulation and celebration of small wins.',
+            "confidence-boost":
+              'Perfect for our "Steady Builder" track, focusing on resilience and positive self-talk strategies.',
+            "advanced-track":
+              'Your child is ready for our "Confidence Champion" track with leadership skills and peer mentoring.',
+            "leadership-track":
+              'Excellent fit for our "Young Leader" track, combining advanced confidence with helping others succeed.',
+          };
+
+          resultText.textContent = recommendations[result];
+          resultDiv.style.display = "block";
+          resultDiv.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+
+      // Emoji Slider
+      const emojiSlider = document.getElementById("emojiSlider");
+      const emojiDisplay = document.getElementById("emojiDisplay");
+      const emojiText = document.getElementById("emojiText");
+
+      const emojiData = {
+        1: { emoji: "😟", text: "Not excited" },
+        2: { emoji: "😐", text: "A little interested" },
+        3: { emoji: "🙂", text: "Somewhat excited" },
+        4: { emoji: "😄", text: "Very excited" },
+        5: { emoji: "🤩", text: "Super excited!" },
+      };
+
+      emojiSlider.addEventListener("input", function () {
+        const value = parseInt(this.value);
+        const data = emojiData[value];
+        emojiDisplay.textContent = data.emoji;
+        emojiText.textContent = data.text;
+        emojiDisplay.style.animation = "none";
+        emojiDisplay.offsetHeight; // Trigger reflow
+        emojiDisplay.style.animation = "bounce 0.5s ease";
+      });
+
+      // Time Calculator
+      function calculateConfidence() {
+        const currentLevel = document.getElementById("currentLevel").value;
+        const practiceTime = document.getElementById("practiceTime").value;
+        const resultDiv = document.getElementById("calculatorResult");
+        const timelineText = document.getElementById("timelineText");
+
+        if (!currentLevel || !practiceTime) {
+          alert("Please select both options to calculate your timeline!");
+          return;
+        }
+
+        const timelines = {
+          "low-10": {
+            weeks: 6,
+            milestones:
+              "Week 2: First smile in class, Week 4: Asks for help, Week 6: Confident in abilities",
+          },
+          "low-20": {
+            weeks: 5,
+            milestones:
+              "Week 2: Tries challenging problems, Week 3: Participates in discussions, Week 5: Leads by example",
+          },
+          "low-30": {
+            weeks: 4,
+            milestones:
+              "Week 1: Immediate engagement, Week 2: Active participation, Week 4: Mentors other students",
+          },
+          "medium-10": {
+            weeks: 4,
+            milestones:
+              "Week 1: Increased participation, Week 2: Confident presentations, Week 4: Academic leadership",
+          },
+          "medium-20": {
+            weeks: 3,
+            milestones:
+              "Week 1: Immediate confidence boost, Week 2: Helps classmates, Week 3: Teacher recognition",
+          },
+          "medium-30": {
+            weeks: 3,
+            milestones:
+              "Week 1: Advanced skills, Week 2: Peer mentoring, Week 3: Sustainable confidence habits",
+          },
+          "high-10": {
+            weeks: 3,
+            milestones:
+              "Week 1: Refined skills, Week 2: Leadership roles, Week 3: Inspiring others",
+          },
+          "high-20": {
+            weeks: 2,
+            milestones:
+              "Week 1: Advanced techniques, Week 2: Confidence mastery and peer teaching",
+          },
+          "high-30": {
+            weeks: 2,
+            milestones:
+              "Week 1: Expert level skills, Week 2: Natural confidence leader and mentor",
+          },
+        };
+
+        const key = `${currentLevel}-${practiceTime}`;
+        const timeline = timelines[key];
+
+        timelineText.innerHTML = `
+                <div style="font-size: 1.2rem; margin-bottom: 1rem;">
+                    🎯 <strong>${timeline.weeks} weeks</strong> to major confidence transformation!
+                </div>
+                <div style="text-align: left; padding: 1rem; background: var(--neutral-100); border-radius: 10px;">
+                    <strong>Your milestones:</strong><br>
+                    ${timeline.milestones}
+                </div>
+                <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--neutral-600);">
+                    *Based on data from 1,247+ students with similar profiles
+                </div>
+            `;
+
+        resultDiv.style.display = "block";
+        resultDiv.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // FAQ Toggle
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", function () {
+          const faqItem = this.parentElement;
+          const isActive = faqItem.classList.contains("active");
+
+          // Close all other FAQ items
+          document.querySelectorAll(".faq-item").forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          // Toggle current item
+          if (!isActive) {
+            faqItem.classList.add("active");
+          }
+        });
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            const headerHeight = document.querySelector("header").offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight - 20;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Animate trust signals on scroll
+      const observerOptions = {
+        threshold: 0.5,
+        rootMargin: "0px 0px -100px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = "slideInUp 0.8s ease-out";
+          }
+        });
+      }, observerOptions);
+
+      // Observe benefit cards and testimonials
+      document
+        .querySelectorAll(".benefit-card, .testimonial-card, .step")
+        .forEach((card) => {
+          observer.observe(card);
+        });
+
+      // Mascot interaction
+      window.addEventListener("DOMContentLoaded", () => {
+        const messages = [
+          "Hi! I'm here to help you build confidence! 🌟",
+          "Believe in yourself and all that you are. ✨",
+          "Every small step forward is still progress. Keep going! 🌱",
+          "You are capable of amazing things. Never forget that. 💪",
+          "Stay positive, work hard, and make it happen! 🚀",
+        ];
+        let messageIndex = 0;
+        let messageInterval = null;
+        const mascotElement = document.querySelector(".mascot");
+
+        const showNextMessage = () => {
+          const oldTooltip = mascotElement.querySelector(".mascot-tooltip");
+          if (oldTooltip) oldTooltip.remove();
+
+          const tooltip = document.createElement("div");
+          tooltip.classList.add("mascot-tooltip");
+          tooltip.innerHTML = messages[messageIndex];
+          tooltip.style.cssText = `
+            position: absolute; bottom: 90px; right: 0; background: white;
+            padding: 1rem; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            font-size: 0.9rem; white-space: nowrap; z-index: 1001; opacity: 0;
+            transform: translateY(10px); transition: all 0.3s ease; max-width: 200px;
+            white-space: normal;
+          `;
+          mascotElement.appendChild(tooltip);
+
+          setTimeout(() => {
+            tooltip.style.opacity = "1";
+            tooltip.style.transform = "translateY(0)";
+          }, 100);
+          setTimeout(() => {
+            tooltip.style.opacity = "0";
+            setTimeout(() => {
+              if (tooltip.parentElement) tooltip.remove();
+            }, 300);
+          }, 3500);
+
+          messageIndex = (messageIndex + 1) % messages.length;
+        };
+
+        mascotElement.addEventListener("click", function () {
+          this.style.animation = "bounce 0.5s ease";
+          setTimeout(() => {
+            this.style.animation = "bounce 2s infinite";
+          }, 500);
+
+          if (messageInterval) {
+            clearInterval(messageInterval);
+            messageInterval = null;
+            const existingTooltip = this.querySelector(".mascot-tooltip");
+            if (existingTooltip) existingTooltip.remove();
+          } else {
+            showNextMessage();
+            messageInterval = setInterval(showNextMessage, 4000);
+          }
+        });
+
+        showNextMessage();
+        messageInterval = setInterval(showNextMessage, 4000);
+      });
+
+      // Audio testimonial simulation
+      document.querySelectorAll(".play-button").forEach((button) => {
+        button.addEventListener("click", function () {
+          const wasPlaying = this.textContent === "⏸️";
+
+          document.querySelectorAll(".play-button").forEach((btn) => {
+            btn.textContent = "▶️";
+          });
+
+          if (!wasPlaying) {
+            this.textContent = "⏸️";
+            setTimeout(() => {
+              this.textContent = "▶️";
+            }, 5000);
+          }
+        });
+      });
+
+      // Dynamic counter animation
+      function animateCounter(el, target) {
+        let count = 0;
+        const step = target / 50;
+        const interval = setInterval(() => {
+          count += step;
+          if (count >= target) {
+            el.textContent =
+              target % 1 === 0 ? Math.floor(target) : target.toFixed(1);
+            clearInterval(interval);
+          } else {
+            el.textContent = Math.floor(count);
+          }
+        }, 30);
+      }
+
+      const counters = document.querySelectorAll(".trust-number");
+
+      const counterObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const target = parseFloat(entry.target.dataset.target);
+              if (!isNaN(target)) {
+                animateCounter(entry.target, target);
+                counterObserver.unobserve(entry.target);
+              }
+            }
+          });
+        },
+        { threshold: 0.9 }
+      );
+
+      counters.forEach((counter) => counterObserver.observe(counter));
+    </script>
+  </body>
+</html>
